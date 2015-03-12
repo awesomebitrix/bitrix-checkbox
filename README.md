@@ -4,6 +4,8 @@
 
 ```
 #!json
+{
+// ...
     "repositories": [
         {
             "type": "vcs",
@@ -13,6 +15,8 @@
     "require": {
         "devel59/bitrix-checkbox": "*"
     }
+// ...
+}
 ```
 В файл **bitrix/php_interface/init.php** нужно добавить
 
