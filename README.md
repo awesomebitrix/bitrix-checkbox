@@ -22,7 +22,7 @@
 use Bitrix\Main\EventManager;
 use Devel59\Bitrix\Iblock\Property\CheckboxProperty;
 
-require_once __DIR__ . '<путь до корня компоновщика>/vendor/autoload.php';
+require_once __DIR__ . '<путь до корня проекта>/vendor/autoload.php';
 
 $eventMgr = EventManager::getInstance();
 CheckboxProperty::addInEvent($eventMgr);
