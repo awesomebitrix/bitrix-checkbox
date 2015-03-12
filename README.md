@@ -18,6 +18,7 @@
 
 ```
 #!php
+<?php
 use Bitrix\Main\EventManager;
 use Devel59\Bitrix\Iblock\Property\CheckboxProperty;
 
