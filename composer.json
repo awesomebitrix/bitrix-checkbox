@@ -1,0 +1,18 @@
+{
+    "name": "devel59/bitrix-checkbox",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Stanislav Zabolotnykh",
+            "email": "v40287836@yandex.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devel59\\Bitrix\\Iblock\\Property\\": "src"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+# editors
+.idea
+
+# utils
+composer.phar
+vendor
+composer.lock
+
+# temporary
+demo
