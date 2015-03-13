@@ -96,14 +96,8 @@ class CheckboxProperty {
 
         if ($info['ID'] > 0) {
             $rawVal = $data['VALUE'];
-            $validVals = [0, 1];
-            if (is_numeric($rawVal)) {
-                $val = (int)$rawVal;
-                if (!in_array($val, $validVals, true)) {
-                    $errors[] = 'Значением можно указать: ' . implode(', ', $validVals);
-                }
-            } else {
-                $errors[] = 'Нужно указать число (возможные значения: ' . implode(', ', $validVals) . ')';
+            if (!is_numeric($rawVal) || !is_bool($rawVal)) {
+                $errors[] = 'Нужно указать число или булево значение';
             }
         }
 
