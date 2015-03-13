@@ -31,3 +31,26 @@ require_once __DIR__ . '<путь до корня проекта>/vendor/autoloa
 $eventMgr = EventManager::getInstance();
 CheckboxProperty::addInEvent($eventMgr);
 ```
+
+# Использование #
+
+Значением свойства можно указывать 0, 1, true, false, '0', '1', например:
+
+```
+#!php
+<?php
+use Bitrix\Main\Loader;
+
+Loader::includeModule('iblock');
+
+$ibElemMgr = new CIBlockElement();
+$ibElemMgr->Add(
+    [
+        // ...
+        'PROPERTY_VALUES' => [
+            'checkbox' => '1' // или 1, или true
+        ]
+        // ...
+    ]
+);
+```
