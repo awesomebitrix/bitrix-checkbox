@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "devel59/bitrix-checkbox": "*"
+        "devel59/bitrix-checkbox": "dev-master"
     }
 // ...
 }
