@@ -39,8 +39,26 @@ class CheckboxProperty {
             'CheckFields' => $calledClass . '::CheckFields',
             'ConvertToDB' => $calledClass . '::ConvertToDB',
             'ConvertFromDB' => $calledClass . '::ConvertFromDB',
-            'GetPropertyFieldHtml' => $calledClass . '::GetPropertyFieldHtml'
+            'GetPropertyFieldHtml' => $calledClass . '::GetPropertyFieldHtml',
+            'GetAdminListViewHTML' => $calledClass . '::GetAdminListViewHTML'
         ];
+    }
+
+    /**
+     * Показ в списке
+     *
+     * @param array $info
+     * @param array $data
+     * @param array $htmlInfo
+     * @return string
+     */
+    public static function GetAdminListViewHTML(array $info, array $data, array $htmlInfo) {
+        $val = (int)$data['VALUE'];
+        if ($val === 1) {
+            return '&#10004;';
+        }
+
+        return '&#10006;';
     }
 
     /**
