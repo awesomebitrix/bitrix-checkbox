@@ -6,12 +6,6 @@
 #!json
 {
 // ...
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://devel59@bitbucket.org/devel59/bitrix-checkbox.git"
-        }
-    ],
     "require": {
         "devel59/bitrix-checkbox": "dev-master"
     }
