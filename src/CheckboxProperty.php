@@ -13,7 +13,7 @@ class CheckboxProperty {
      * @param EventManager $eventManager
      * @return void
      */
-    public static function addInEvent(EventManager $eventManager) {
+    public static function subscribeToBuildList(EventManager $eventManager) {
         $calledClass = get_called_class();
         $eventManager->addEventHandler(
             'iblock',
@@ -32,7 +32,7 @@ class CheckboxProperty {
     public static function GetUserTypeDescription() {
         $calledClass = get_called_class();
 
-        return [
+        return array(
             'PROPERTY_TYPE' => 'N',
             'USER_TYPE' => 'Checkbox',
             'DESCRIPTION' => 'Флаг/переключатель',
@@ -41,7 +41,7 @@ class CheckboxProperty {
             'ConvertFromDB' => $calledClass . '::ConvertFromDB',
             'GetPropertyFieldHtml' => $calledClass . '::GetPropertyFieldHtml',
             'GetAdminListViewHTML' => $calledClass . '::GetAdminListViewHTML'
-        ];
+        );
     }
 
     /**
@@ -78,8 +78,8 @@ class CheckboxProperty {
         $checkedText = ($checked ? 'checked' : '');
 
         return str_replace(
-            ['#html_name#', '#checked#'],
-            [$htmlInfo['VALUE'], $checkedText],
+            array('#html_name#', '#checked#'),
+            array($htmlInfo['VALUE'], $checkedText),
             $html
         );
     }
@@ -92,7 +92,7 @@ class CheckboxProperty {
      * @return array
      */
     public static function CheckFields(array $info, array $data) {
-        $errors = [];
+        $errors = array();
 
         if ($info['ID'] > 0) {
             $rawVal = $data['VALUE'];
@@ -112,7 +112,7 @@ class CheckboxProperty {
      * @return int
      */
     public static function ConvertToDB(array $info, array $data) {
-        $data['VALUE'] = (int)((bool)$data['VALUE']);
+        $data['VALUE'] = (int)$data['VALUE'];
 
         return $data;
     }
@@ -125,7 +125,7 @@ class CheckboxProperty {
      * @return array
      */
     public static function ConvertFromDB(array $info, array $data) {
-        $data['VALUE'] = (int)((bool)$data['VALUE']);
+        $data['VALUE'] = (int)$data['VALUE'];
 
         return $data;
     }
