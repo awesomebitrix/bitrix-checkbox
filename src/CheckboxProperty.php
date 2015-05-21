@@ -112,7 +112,7 @@ class CheckboxProperty {
      * @return int
      */
     public static function ConvertToDB(array $info, array $data) {
-        $data['VALUE'] = (int)$data['VALUE'];
+        $data['VALUE'] = (int)(bool)(int)$data['VALUE'];
 
         return $data;
     }
@@ -125,7 +125,7 @@ class CheckboxProperty {
      * @return array
      */
     public static function ConvertFromDB(array $info, array $data) {
-        $data['VALUE'] = (int)$data['VALUE'];
+        $data['VALUE'] = (int)(bool)(int)$data['VALUE'];
 
         return $data;
     }
